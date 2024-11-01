@@ -1,0 +1,20 @@
+<launch>
+  <!-- 启动 my_rviz_node -->
+  <node pkg="mobiman" type="chassis_control_node" name="chassis_control_node" output="screen">
+        <param name="current_motor_topic_name" value="/hdas/feedback_chassis"/>
+        <param name="chassis_control_topic_name" value="/motion_target/target_speed_chassis"/>
+        <param name="motor_command_topic_name" value="/motion_control/control_chassis"/>
+        <param name="breaking_topic_name" value='/motion_target/brake_mode' />
+  </node>
+  <node pkg="mobiman" type="r1_control_manager" name="r1_control_manager" output="screen" launch-prefix="">
+         <param name="torso_control_topic" value="/motion_target/target_joint_state_torso"/>
+         <param name="chassis_control_topic" value="/motion_target/target_speed_chassis"/>
+         <param name="sub_controller_topic" value="/controller"/>
+  </node>
+    <arg name="urdfFile" value="$(find mobiman)/urdf/R1_PRO/urdf/R1_PRO__URDF_20240904.urdf" />
+    <node pkg="mobiman" type="r1_eepose_pub_node" name="r1_eepose_pub_node" output="screen">
+      <param name="urdfFile" value="$(arg urdfFile)"/>
+    </node>
+
+
+</launch>

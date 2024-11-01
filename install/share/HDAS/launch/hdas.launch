@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <node pkg="HDAS" type="HDAS" name="HDAS" output="screen">
+        <param name="chassis_feedback_topic_name" value="/hdas/feedback_chassis"/>
+        <param name="chassis_control_command_topic_name" value="/motion_control/control_chassis"/>
+
+        <param name="torso_feedback_topic_name" value="/hdas/feedback_torso"/>
+        <param name="torso_control_command_topic_name" value="/motion_control/control_torso"/>
+
+        <param name="controller_topic_name" value="/controller"/>
+
+        <param name="left_arm_feedback_topic" value="/hdas/feedback_arm_left"/>
+        <param name="right_arm_feedback_topic" value="/hdas/feedback_arm_right"/>
+
+        <param name="left_gripper_feedback_topic" value="/hdas/feedback_gripper_left"/>
+        <param name="right_gripper_feedback_topic" value="/hdas/feedback_gripper_right"/>
+
+        <param name="left_arm_joint_control_topic" value="/motion_control/control_arm_left"/>
+        <param name="right_arm_joint_control_topic" value="/motion_control/control_arm_right"/>
+
+        <param name="left_gripper_joint_control_topic" value="/motion_control/control_gripper_left"/>
+        <param name="right_gripper_joint_control_topic" value="/motion_control/control_gripper_right"/>
+
+        <param name="left_gripper_position_control_topic" value="/motion_control/position_control_gripper_left"/>
+        <param name="right_gripper_position_control_topic" value="/motion_control/position_control_gripper_right"/>
+
+        <param name="left_gripper_force_control_topic" value="/motion_control/force_control_gripper_left"/>
+        <param name="right_gripper_force_control_topic" value="/motion_control/force_control_gripper_right"/>
+
+        <param name="imu_feedback_topic_name" value="/hdas/imu_chassis"/>
+        <param name="bms_feedback_topic_name" value="/hdas/bms"/>
+
+        <param name="left_arm_error_topic_name" value="/hdas/feedback_status_arm_left"/>
+        <param name="right_arm_error_topic_name" value="/hdas/feedback_status_arm_right"/>
+        <param name="torso_error_topic_name" value="/hdas/feedback_status_torso"/>
+
+        <param name="function_frame_service_left_arm_name" value="function_frame_left_arm"/>
+        <param name="function_frame_service_right_arm_name" value="function_frame_right_arm"/>
+
+        <param name="function_frame_service_torso_name" value="function_frame_torso"/>
+
+    </node>
+</launch>

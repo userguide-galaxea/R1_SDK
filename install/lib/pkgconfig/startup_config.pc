@@ -1,0 +1,8 @@
+prefix=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install
+
+Name: startup_config
+Description: Description of startup_config
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy

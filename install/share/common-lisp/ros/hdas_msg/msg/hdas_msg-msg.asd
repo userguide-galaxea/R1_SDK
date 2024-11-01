@@ -1,0 +1,26 @@
+
+(cl:in-package :asdf)
+
+(defsystem "hdas_msg-msg"
+  :depends-on (:roslisp-msg-protocol :roslisp-utils :std_msgs-msg
+)
+  :components ((:file "_package")
+    (:file "Drivetrain" :depends-on ("_package_Drivetrain"))
+    (:file "_package_Drivetrain" :depends-on ("_package"))
+    (:file "DrivetrainStamped" :depends-on ("_package_DrivetrainStamped"))
+    (:file "_package_DrivetrainStamped" :depends-on ("_package"))
+    (:file "bms" :depends-on ("_package_bms"))
+    (:file "_package_bms" :depends-on ("_package"))
+    (:file "controller_signal" :depends-on ("_package_controller_signal"))
+    (:file "_package_controller_signal" :depends-on ("_package"))
+    (:file "controller_signal_stamped" :depends-on ("_package_controller_signal_stamped"))
+    (:file "_package_controller_signal_stamped" :depends-on ("_package"))
+    (:file "feedback_status" :depends-on ("_package_feedback_status"))
+    (:file "_package_feedback_status" :depends-on ("_package"))
+    (:file "feedback_status_detail" :depends-on ("_package_feedback_status_detail"))
+    (:file "_package_feedback_status_detail" :depends-on ("_package"))
+    (:file "imu" :depends-on ("_package_imu"))
+    (:file "_package_imu" :depends-on ("_package"))
+    (:file "motor_control" :depends-on ("_package_motor_control"))
+    (:file "_package_motor_control" :depends-on ("_package"))
+  ))

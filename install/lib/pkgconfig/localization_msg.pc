@@ -1,0 +1,8 @@
+prefix=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install
+
+Name: localization_msg
+Description: Description of localization_msg
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime roscpp rospy std_msgs

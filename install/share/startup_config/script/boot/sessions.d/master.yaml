@@ -1,0 +1,10 @@
+session_name: master
+start_directory: ${START_DIR}
+windows:
+- window_name: roscore
+  focus: true
+  layout: even-horizontal
+  panes:
+  - shell_command:
+    - sleep 1
+    - ./start_roscore.sh

@@ -1,0 +1,22 @@
+prefix=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install
+exec_prefix=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install
+libdir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/lib
+bindir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/bin
+pkglibdir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/lib/pinocchio
+includedir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/include
+datarootdir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/share
+pkgdatarootdir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/share
+docdir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/share/doc/pinocchio
+doxygendocdir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/share/doc/pinocchio/doxygen-html
+
+Name: pinocchio
+Description: A fast and flexible implementation of Rigid Body Dynamics algorithms and their analytical derivatives
+URL: http://github.com/stack-of-tasks/pinocchio
+Version: 2.5.1
+Requires: eigen3 >= 3.0.5, urdfdom >= 0.2.0, hpp-fcl >= 1.4.0
+Conflicts: 
+Libs: -L${libdir}  -lpinocchio -L/usr/lib/aarch64-linux-gnu -lboost_filesystem -lboost_serialization -lboost_system
+Libs.private: 
+Cflags:  -I${includedir} -DPINOCCHIO_WITH_URDFDOM -DPINOCCHIO_WITH_HPP_FCL -DBOOST_MPL_LIMIT_LIST_SIZE=30
+
+

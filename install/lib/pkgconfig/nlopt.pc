@@ -1,0 +1,8 @@
+prefix=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install
+
+Name: nlopt
+Description: Description of nlopt
+Version: 2.1.28
+Cflags: 
+Libs: -L${prefix}/lib -lnlopt_cxx
+Requires: 

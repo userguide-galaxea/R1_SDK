@@ -1,0 +1,34 @@
+session_name: R1_modules
+start_directory: ${START_DIR}
+windows:
+- window_name: HDAS
+  panes:
+  - shell_command:
+      - sleep 2
+      - ./start_hdas.sh
+
+- window_name: mobiman_chassis|mobiman_joint
+  layout: even-horizontal
+  panes:
+  - shell_command:
+      - sleep 10
+      - ./start_mobiman_r1_chassis.sh
+  - shell_command:
+      - sleep 10
+      - ./start_mobiman_r1_joint.sh
+
+- window_name: zed|realsense|livox|signal_camera
+  layout: even-horizontal
+  panes:
+  - shell_command:
+      - sleep 3
+      - ./start_zed_camera.sh
+  - shell_command:
+      - sleep 4
+      - ./start_realsense_camera.sh
+  - shell_command:
+      - sleep 5
+      - ./start_livox_lidar.sh
+  - shell_command:
+      - sleep 5
+      - ./start_signal_camera.sh

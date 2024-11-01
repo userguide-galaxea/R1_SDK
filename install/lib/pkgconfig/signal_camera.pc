@@ -1,0 +1,8 @@
+prefix=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install
+
+Name: signal_camera
+Description: Description of signal_camera
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lsignal_camera -lmessage_runtime
+Requires: roscpp std_msgs

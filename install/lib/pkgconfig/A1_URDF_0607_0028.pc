@@ -1,0 +1,8 @@
+prefix=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install
+
+Name: A1_URDF_0607_0028
+Description: Description of A1_URDF_0607_0028
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

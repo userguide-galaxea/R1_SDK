@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <node pkg="HDAS" type="ota_server" name="ota_server" output="screen">
+    </node>
+</launch>

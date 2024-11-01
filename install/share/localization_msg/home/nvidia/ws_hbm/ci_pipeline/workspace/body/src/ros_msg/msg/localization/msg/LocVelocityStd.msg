@@ -1,0 +1,3 @@
+uint8 available
+LocVelStdGlobal vel_std_global
+LocVelStdLocal vel_std_local

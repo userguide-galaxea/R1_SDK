@@ -1,0 +1,3 @@
+uint8 available
+LocAccGlobal acceleration_global
+LocAccLocal acceleration_local

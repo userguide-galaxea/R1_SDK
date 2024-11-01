@@ -1,0 +1,22 @@
+prefix=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install
+exec_prefix=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install
+libdir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/lib
+bindir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/bin
+pkglibdir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/lib/hpp-fcl
+includedir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/include
+datarootdir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/share
+pkgdatarootdir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/share
+docdir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/share/doc/hpp-fcl
+doxygendocdir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/share/doc/hpp-fcl/doxygen-html
+
+Name: hpp-fcl
+Description: HPP fork of FCL -- The Flexible Collision Library
+URL: https://github.com/humanoid-path-planner/hpp-fcl
+Version: 1.6.0
+Requires: eigen3 >= 3.0.0, octomap >= 1.6
+Conflicts: 
+Libs: -L${libdir}  -lhpp-fcl
+Libs.private: 
+Cflags:  -I${includedir} -DHPP_FCL_HAVE_OCTOMAP -DFCL_HAVE_OCTOMAP -DOCTOMAP_MAJOR_VERSION=1 -DOCTOMAP_MINOR_VERSION=9 -DOCTOMAP_PATCH_VERSION=8
+
+

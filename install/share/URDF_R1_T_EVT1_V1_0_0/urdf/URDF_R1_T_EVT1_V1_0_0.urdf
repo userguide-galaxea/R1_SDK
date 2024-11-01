@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="mobiman/urdf/R1_T">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00057766 -0.0011257 0.054464"
+        rpy="0 0 0" />
+      <mass
+        value="0.577" />
+      <inertia
+        ixx="0.00038535"
+        ixy="4.0984E-08"
+        ixz="-5.4662E-06"
+        iyy="0.00075104"
+        iyz="1.2067E-07"
+        izz="0.00068219" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.37255 0.37255 0.37255 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="torso_link1">
+    <inertial>
+      <origin
+        xyz="-0.00037475 -0.019544 0.00075551"
+        rpy="0 0 0" />
+      <mass
+        value="0.577" />
+      <inertia
+        ixx="0.0013058"
+        ixy="5.4619E-06"
+        ixz="4.0696E-08"
+        iyy="0.0008728"
+        iyz="-8.0112E-05"
+        izz="0.0016415" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/torso_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.37255 0.37255 0.37255 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/torso_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="torso_joint1"
+    type="revolute">
+    <origin
+      xyz="0 -0.0015159 0.09"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="torso_link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.134"
+      upper="1.833"
+      effort="100"
+      velocity="2.0944" />
+  </joint>
+  <link
+    name="torso_link2">
+    <inertial>
+      <origin
+        xyz="0.0013169 -0.065133 0.001377"
+        rpy="0 0 0" />
+      <mass
+        value="0.154" />
+      <inertia
+        ixx="0.00027071"
+        ixy="-1.5478E-06"
+        ixz="4.5992E-06"
+        iyy="7.3813E-05"
+        iyz="-1.8687E-06"
+        izz="0.00023793" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/torso_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.37255 0.37255 0.37255 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/torso_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="torso_joint2"
+    type="revolute">
+    <origin
+      xyz="0 -0.16 0"
+      rpy="0 0 0" />
+    <parent
+      link="torso_link1" />
+    <child
+      link="torso_link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.793"
+      upper="2.531"
+      effort="100"
+      velocity="2.0944" />
+  </joint>
+  <link
+    name="torso_link3">
+    <inertial>
+      <origin
+        xyz="8.3326E-08 -0.0032421 -0.00090994"
+        rpy="0 0 0" />
+      <mass
+        value="0.464" />
+      <inertia
+        ixx="0.00014807"
+        ixy="7.3208E-10"
+        ixz="-3.3454E-10"
+        iyy="0.00013577"
+        iyz="4.7108E-07"
+        izz="0.00014236" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/torso_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/torso_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="torso_joint3"
+    type="revolute">
+    <origin
+      xyz="0 -0.12 0"
+      rpy="0 0 0" />
+    <parent
+      link="torso_link2" />
+    <child
+      link="torso_link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.094"
+      upper="1.833"
+      effort="100"
+      velocity="2.0944" />
+  </joint>
+  <link
+    name="torso_link4">
+    <inertial>
+      <origin
+        xyz="2.5491E-05 -1.048E-05 0.078495"
+        rpy="0 0 0" />
+      <mass
+        value="0.537" />
+      <inertia
+        ixx="0.00069467"
+        ixy="-2.1234E-07"
+        ixz="9.8122E-08"
+        iyy="0.00053692"
+        iyz="1.0795E-07"
+        izz="0.00059606" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/torso_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/torso_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="torso_joint4"
+    type="revolute">
+    <origin
+      xyz="-3.6078E-05 -0.043087 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="torso_link3" />
+    <child
+      link="torso_link4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.054"
+      upper="3.054"
+      effort="100"
+      velocity="2.0944" />
+  </joint>
+  <link
+    name="left_arm_link1">
+    <inertial>
+      <origin
+        xyz="0.00013614 1.1329E-05 0.057749"
+        rpy="0 0 0" />
+      <mass
+        value="0.397" />
+      <inertia
+        ixx="5.0974E-05"
+        ixy="8.8278E-08"
+        ixz="3.6915E-07"
+        iyy="6.5775E-05"
+        iyz="-4.893E-07"
+        izz="4.2583E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/left_arm_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/left_arm_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint1"
+    type="revolute">
+    <origin
+      xyz="3.6078E-05 0.02751 0.1176"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="torso_link4" />
+    <child
+      link="left_arm_link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.8798"
+      upper="2.8798"
+      effort="7"
+      velocity="25.133" />
+  </joint>
+  <link
+    name="left_arm_link2">
+    <inertial>
+      <origin
+        xyz="-0.10979 -0.00055915 0.00099616"
+        rpy="0 0 0" />
+      <mass
+        value="0.386" />
+      <inertia
+        ixx="0.000155"
+        ixy="-1.6014E-06"
+        ixz="-3.3295E-05"
+        iyy="0.00043097"
+        iyz="-1.2963E-07"
+        izz="0.00044101" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/left_arm_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/left_arm_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint2"
+    type="revolute">
+    <origin
+      xyz="0 0.00049987 0.065587"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="left_arm_link1" />
+    <child
+      link="left_arm_link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="3.2289"
+      effort="7"
+      velocity="25.133" />
+  </joint>
+  <link
+    name="left_arm_link3">
+    <inertial>
+      <origin
+        xyz="0.0063059 -0.042385 0.00078414"
+        rpy="0 0 0" />
+      <mass
+        value="0.445" />
+      <inertia
+        ixx="8.7197E-05"
+        ixy="1.0328E-05"
+        ixz="4.5234E-06"
+        iyy="4.3278E-05"
+        iyz="-2.1952E-05"
+        izz="7.3539E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/left_arm_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/left_arm_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint3"
+    type="revolute">
+    <origin
+      xyz="-0.13281 -0.00066145 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_arm_link2" />
+    <child
+      link="left_arm_link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.3161"
+      upper="0"
+      effort="7"
+      velocity="25.133" />
+  </joint>
+  <link
+    name="left_arm_link4">
+    <inertial>
+      <origin
+        xyz="3.0406E-05 0.0044178 0.071268"
+        rpy="0 0 0" />
+      <mass
+        value="0.173" />
+      <inertia
+        ixx="3.0845E-05"
+        ixy="-2.4227E-09"
+        ixz="-2.0955E-08"
+        iyy="3.2741E-05"
+        iyz="-2.1841E-06"
+        izz="6.9908E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/left_arm_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/left_arm_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint4"
+    type="revolute">
+    <origin
+      xyz="0.0119 -0.061137 -0.00050018"
+      rpy="-3.1416 1.5708 3.1416" />
+    <parent
+      link="left_arm_link3" />
+    <child
+      link="left_arm_link4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.8798"
+      upper="2.8798"
+      effort="7"
+      velocity="25.133" />
+  </joint>
+  <link
+    name="left_arm_link5">
+    <inertial>
+      <origin
+        xyz="0.033643 -1.5153E-05 0.0078127"
+        rpy="0 0 0" />
+      <mass
+        value="0.134" />
+      <inertia
+        ixx="1.1284E-05"
+        ixy="2.5641E-08"
+        ixz="3.8852E-06"
+        iyy="1.6869E-05"
+        iyz="-1.3206E-08"
+        izz="1.4775E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/left_arm_link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/left_arm_link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint5"
+    type="revolute">
+    <origin
+      xyz="0 0.0019999 0.091149"
+      rpy="0.055739 -1.5708 1.5151" />
+    <parent
+      link="left_arm_link4" />
+    <child
+      link="left_arm_link5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.6581"
+      upper="1.6581"
+      effort="7"
+      velocity="25.133" />
+  </joint>
+  <link
+    name="left_arm_link6">
+    <inertial>
+      <origin
+        xyz="-0.012307 -0.0052341 0.050845"
+        rpy="0 0 0" />
+      <mass
+        value="0.231" />
+      <inertia
+        ixx="2.0922E-05"
+        ixy="2.2614E-06"
+        ixz="-1.193E-05"
+        iyy="9.4204E-05"
+        iyz="2.7742E-06"
+        izz="7.9366E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/left_arm_link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/left_arm_link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint6"
+    type="revolute">
+    <origin
+      xyz="0.048485 0 0.002"
+      rpy="-1.5708 0 -1.5708" />
+    <parent
+      link="left_arm_link5" />
+    <child
+      link="left_arm_link6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.8798"
+      upper="2.8798"
+      effort="7"
+      velocity="25.133" />
+  </joint>
+  <link
+    name="right_arm_link1">
+    <inertial>
+      <origin
+        xyz="1.1329E-05 -0.00013615 0.057549"
+        rpy="0 0 0" />
+      <mass
+        value="0.397" />
+      <inertia
+        ixx="6.5775E-05"
+        ixy="-8.8247E-08"
+        ixz="-4.893E-07"
+        iyy="5.0974E-05"
+        iyz="-3.6915E-07"
+        izz="4.2583E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/right_arm_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/right_arm_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint1"
+    type="revolute">
+    <origin
+      xyz="3.6078E-05 -0.02749 0.1176"
+      rpy="-1.5708 -1.5708 3.1416" />
+    <parent
+      link="torso_link4" />
+    <child
+      link="right_arm_link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.8798"
+      upper="2.8798"
+      effort="7"
+      velocity="25.133" />
+  </joint>
+  <link
+    name="right_arm_link2">
+    <inertial>
+      <origin
+        xyz="-0.10979 -0.00055915 0.00099571"
+        rpy="0 0 0" />
+      <mass
+        value="0.386" />
+      <inertia
+        ixx="0.000155"
+        ixy="-1.6014E-06"
+        ixz="-3.3296E-05"
+        iyy="0.00043097"
+        iyz="-1.2964E-07"
+        izz="0.00044101" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/right_arm_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/right_arm_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint2"
+    type="revolute">
+    <origin
+      xyz="0.00049987 0 0.065387"
+      rpy="-1.5708 0 -1.5708" />
+    <parent
+      link="right_arm_link1" />
+    <child
+      link="right_arm_link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="3.2289"
+      effort="7"
+      velocity="25.133" />
+  </joint>
+  <link
+    name="right_arm_link3">
+    <inertial>
+      <origin
+        xyz="0.0063061 -0.042385 0.00078386"
+        rpy="0 0 0" />
+      <mass
+        value="0.445" />
+      <inertia
+        ixx="8.7197E-05"
+        ixy="1.0328E-05"
+        ixz="4.5235E-06"
+        iyy="4.3278E-05"
+        iyz="-2.1952E-05"
+        izz="7.3539E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/right_arm_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/right_arm_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint3"
+    type="revolute">
+    <origin
+      xyz="-0.13281 -0.00066145 0"
+      rpy="0 0 0" />
+    <parent
+      link="right_arm_link2" />
+    <child
+      link="right_arm_link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.3161"
+      upper="0"
+      effort="7"
+      velocity="25.133" />
+  </joint>
+  <link
+    name="right_arm_link4">
+    <inertial>
+      <origin
+        xyz="-3.0395E-05 -0.0044177 0.071268"
+        rpy="0 0 0" />
+      <mass
+        value="0.173" />
+      <inertia
+        ixx="3.0845E-05"
+        ixy="-2.42E-09"
+        ixz="2.0957E-08"
+        iyy="3.2741E-05"
+        iyz="2.184E-06"
+        izz="6.9908E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/right_arm_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/right_arm_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint4"
+    type="revolute">
+    <origin
+      xyz="0.0119 -0.061137 -0.00050043"
+      rpy="0 -1.5708 3.1416" />
+    <parent
+      link="right_arm_link3" />
+    <child
+      link="right_arm_link4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.8798"
+      upper="2.8798"
+      effort="7"
+      velocity="25.133" />
+  </joint>
+  <link
+    name="right_arm_link5">
+    <inertial>
+      <origin
+        xyz="0.033643 1.508E-05 -0.31338"
+        rpy="0 0 0" />
+      <mass
+        value="0.134" />
+      <inertia
+        ixx="1.1284E-05"
+        ixy="-2.5641E-08"
+        ixz="-3.8852E-06"
+        iyy="1.6869E-05"
+        iyz="-1.3206E-08"
+        izz="1.4775E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/right_arm_link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/right_arm_link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint5"
+    type="revolute">
+    <origin
+      xyz="0 -0.30757 0.091149"
+      rpy="-3.1416 -1.5708 -1.5708" />
+    <parent
+      link="right_arm_link4" />
+    <child
+      link="right_arm_link5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.6581"
+      upper="1.6581"
+      effort="7"
+      velocity="25.133" />
+  </joint>
+  <link
+    name="right_arm_link6">
+    <inertial>
+      <origin
+        xyz="-0.012307 -0.0052342 0.050845"
+        rpy="0 0 0" />
+      <mass
+        value="0.231" />
+      <inertia
+        ixx="2.0922E-05"
+        ixy="2.2619E-06"
+        ixz="-1.193E-05"
+        iyy="9.4204E-05"
+        iyz="2.7743E-06"
+        izz="7.9366E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/right_arm_link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/R1_T/meshes/right_arm_link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint6"
+    type="revolute">
+    <origin
+      xyz="0.048485 0 -0.30757"
+      rpy="-1.5708 0 -1.5708" />
+    <parent
+      link="right_arm_link5" />
+    <child
+      link="right_arm_link6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.8798"
+      upper="2.8798"
+      effort="7"
+      velocity="25.133" />
+  </joint>
+</robot>

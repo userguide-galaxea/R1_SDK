@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/setup.sh

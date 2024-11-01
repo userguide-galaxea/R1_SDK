@@ -1,0 +1,8 @@
+prefix=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install
+
+Name: URDF_R1_T_EVT1_V1_0_0
+Description: Description of URDF_R1_T_EVT1_V1_0_0
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

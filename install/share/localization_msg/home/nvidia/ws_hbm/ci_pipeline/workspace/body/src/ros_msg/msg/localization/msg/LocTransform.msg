@@ -1,0 +1,4 @@
+uint8 available
+LocTransformInfo transform_llh_to_boot
+LocTransformInfo transform_avp_map_to_boot
+LocTransformInfo transform_ego_motion_to_boot

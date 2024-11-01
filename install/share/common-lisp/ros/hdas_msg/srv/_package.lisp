@@ -1,0 +1,10 @@
+(cl:defpackage hdas_msg-srv
+  (:use )
+  (:export
+   "FUNCTIONFRAME"
+   "<FUNCTIONFRAME-REQUEST>"
+   "FUNCTIONFRAME-REQUEST"
+   "<FUNCTIONFRAME-RESPONSE>"
+   "FUNCTIONFRAME-RESPONSE"
+  ))
+

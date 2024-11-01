@@ -1,0 +1,27 @@
+%YAML:1.0
+
+Pipelines:
+  - device: /dev/video0
+    width: 1920
+    height: 1080
+    name: /hdas/camera_chassis_front_left/rgb/compressed
+
+  - device: /dev/video1
+    width: 1920
+    height: 1080
+    name: /hdas/camera_chassis_front_right/rgb/compressed
+
+  - device: /dev/video2
+    width: 1920
+    height: 1080
+    name: /hdas/camera_chassis_left/rgb/compressed
+
+  - device: /dev/video3
+    width: 1920
+    height: 1080
+    name: /hdas/camera_chassis_right/rgb/compressed
+
+  - device: /dev/video4
+    width: 1920
+    height: 1080
+    name: /hdas/camera_chassis_rear/rgb/compressed
