@@ -1,4 +1,4 @@
 std_msgs/Header header
-int16 voltage
-int16 current
-int16 capital
+float32 voltage
+float32 current
+float32 capital

@@ -13,4 +13,5 @@
     <depend>std_msgs</depend>
     <depend>hdas_msg</depend>
     <depend>signal_arm_msg</depend>
+    <depend>tf2</depend>
 </package>

@@ -22,15 +22,15 @@
   (:init
    (&key
     ((:header __header) (instance std_msgs::Header :init))
-    ((:voltage __voltage) 0)
-    ((:current __current) 0)
-    ((:capital __capital) 0)
+    ((:voltage __voltage) 0.0)
+    ((:current __current) 0.0)
+    ((:capital __capital) 0.0)
     )
    (send-super :init)
    (setq _header __header)
-   (setq _voltage (round __voltage))
-   (setq _current (round __current))
-   (setq _capital (round __capital))
+   (setq _voltage (float __voltage))
+   (setq _current (float __current))
+   (setq _capital (float __capital))
    self)
   (:header
    (&rest __header)
@@ -53,12 +53,12 @@
    (+
     ;; std_msgs/Header _header
     (send _header :serialization-length)
-    ;; int16 _voltage
-    2
-    ;; int16 _current
-    2
-    ;; int16 _capital
-    2
+    ;; float32 _voltage
+    4
+    ;; float32 _current
+    4
+    ;; float32 _capital
+    4
     ))
   (:serialize
    (&optional strm)
@@ -66,35 +66,35 @@
               (make-string-output-stream (send self :serialization-length)))))
      ;; std_msgs/Header _header
        (send _header :serialize s)
-     ;; int16 _voltage
-       (write-word _voltage s)
-     ;; int16 _current
-       (write-word _current s)
-     ;; int16 _capital
-       (write-word _capital s)
+     ;; float32 _voltage
+       (sys::poke _voltage (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
+     ;; float32 _current
+       (sys::poke _current (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
+     ;; float32 _capital
+       (sys::poke _capital (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
    (buf &optional (ptr- 0))
    ;; std_msgs/Header _header
      (send _header :deserialize buf ptr-) (incf ptr- (send _header :serialization-length))
-   ;; int16 _voltage
-     (setq _voltage (sys::peek buf ptr- :short)) (incf ptr- 2)
-   ;; int16 _current
-     (setq _current (sys::peek buf ptr- :short)) (incf ptr- 2)
-   ;; int16 _capital
-     (setq _capital (sys::peek buf ptr- :short)) (incf ptr- 2)
+   ;; float32 _voltage
+     (setq _voltage (sys::peek buf ptr- :float)) (incf ptr- 4)
+   ;; float32 _current
+     (setq _current (sys::peek buf ptr- :float)) (incf ptr- 4)
+   ;; float32 _capital
+     (setq _capital (sys::peek buf ptr- :float)) (incf ptr- 4)
    ;;
    self)
   )
 
-(setf (get hdas_msg::bms :md5sum-) "c249bbc91a486340927685f24c9fded7")
+(setf (get hdas_msg::bms :md5sum-) "67510a0011fd924169d84e754f550505")
 (setf (get hdas_msg::bms :datatype-) "hdas_msg/bms")
 (setf (get hdas_msg::bms :definition-)
       "std_msgs/Header header
-int16 voltage
-int16 current
-int16 capital
+float32 voltage
+float32 current
+float32 capital
 
 ================================================================================
 MSG: std_msgs/Header
@@ -116,6 +116,6 @@ string frame_id
 
 
 
-(provide :hdas_msg/bms "c249bbc91a486340927685f24c9fded7")
+(provide :hdas_msg/bms "67510a0011fd924169d84e754f550505")
 
 

@@ -1,2 +1,0 @@
-uint8 available
-LocAngVelLocal angvelocity_local

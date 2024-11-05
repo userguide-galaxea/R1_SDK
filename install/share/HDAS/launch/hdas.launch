@@ -27,7 +27,9 @@
         <param name="left_gripper_force_control_topic" value="/motion_control/force_control_gripper_left"/>
         <param name="right_gripper_force_control_topic" value="/motion_control/force_control_gripper_right"/>
 
-        <param name="imu_feedback_topic_name" value="/hdas/imu_chassis"/>
+        <param name="chassis_imu_feedback_topic_name" value="/hdas/imu_chassis"/>
+        <param name="torso_imu_feedback_topic_name" value="/hdas/imu_torso"/>
+
         <param name="bms_feedback_topic_name" value="/hdas/bms"/>
 
         <param name="left_arm_error_topic_name" value="/hdas/feedback_status_arm_left"/>

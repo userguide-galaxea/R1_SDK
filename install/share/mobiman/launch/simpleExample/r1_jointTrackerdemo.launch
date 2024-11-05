@@ -48,7 +48,7 @@
     type="rviz" />
       <!-- 启动 my_rviz_node -->
       <node pkg="mobiman" type="r1_jointTracker_demo_node"
-            name="r1_jointTracker_demo_node" output="screen" />
-      <node pkg="mobiman" type="eepose_pub_node" name="eePose_pub_node" output="screen" >
+            name="r1_jointTracker_demo_node" output="screen"/>
+      <node pkg="mobiman" type="eepose_pub_node" name="eePose_pub_node" output="screen">
       </node>
 </launch>

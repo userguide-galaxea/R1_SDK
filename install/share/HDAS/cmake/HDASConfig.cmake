@@ -67,14 +67,14 @@ set(HDAS_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(HDAS_SOURCE_PREFIX /home/nvidia/ws_hbm/ci_pipeline/workspace/body/src/HDAS)
-  set(HDAS_DEVEL_PREFIX /home/nvidia/ws_hbm/ci_pipeline/workspace/body/devel/.private/HDAS)
+  set(HDAS_SOURCE_PREFIX /home/nvidia/work/ci_pipeline/workspace/body/src/HDAS)
+  set(HDAS_DEVEL_PREFIX /home/nvidia/work/ci_pipeline/workspace/body/devel/.private/HDAS)
   set(HDAS_INSTALL_PREFIX "")
   set(HDAS_PREFIX ${HDAS_DEVEL_PREFIX})
 else()
   set(HDAS_SOURCE_PREFIX "")
   set(HDAS_DEVEL_PREFIX "")
-  set(HDAS_INSTALL_PREFIX /home/nvidia/ws_hbm/ci_pipeline/workspace/body/install)
+  set(HDAS_INSTALL_PREFIX /home/nvidia/work/ci_pipeline/workspace/body/install)
   set(HDAS_PREFIX ${HDAS_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/lib;/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/nvidia/work/ci_pipeline/workspace/body/install/lib;/home/nvidia/work/ci_pipeline/workspace/body/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -185,7 +185,7 @@ foreach(t ${HDAS_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "roscpp;rospy;std_msgs;hdas_msg")
+set(depends "roscpp;rospy;std_msgs;hdas_msg;tf2")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

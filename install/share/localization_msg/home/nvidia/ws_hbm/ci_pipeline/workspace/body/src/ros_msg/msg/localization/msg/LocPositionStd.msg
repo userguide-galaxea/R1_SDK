@@ -1,3 +1,0 @@
-uint8 available
-LocPosStdGlobal pos_std_global
-LocPosStdLocal pos_std_local

@@ -1,4 +1,4 @@
-prefix=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install
+prefix=/home/nvidia/work/ci_pipeline/workspace/body/install
 
 Name: R1_PRO__URDF_20240904
 Description: Description of R1_PRO__URDF_20240904

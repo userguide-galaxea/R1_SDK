@@ -1,4 +1,4 @@
-prefix=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install
+prefix=/home/nvidia/work/ci_pipeline/workspace/body/install
 
 Name: ocs2_core
 Description: Description of ocs2_core

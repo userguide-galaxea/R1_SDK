@@ -1,3 +1,0 @@
-uint8 available
-LocVelGlobal velocity_global
-LocVelLocal velocity_local

@@ -1,10 +1,10 @@
 
 "use strict";
 
-let CustomPoint = require('./CustomPoint.js');
 let CustomMsg = require('./CustomMsg.js');
+let CustomPoint = require('./CustomPoint.js');
 
 module.exports = {
-  CustomPoint: CustomPoint,
   CustomMsg: CustomMsg,
+  CustomPoint: CustomPoint,
 };

@@ -1,5 +1,0 @@
-uint8 available
-LocEuler euler_global
-LocQuaternion quaternion_global
-LocEuler euler_local
-LocQuaternion quaternion_local

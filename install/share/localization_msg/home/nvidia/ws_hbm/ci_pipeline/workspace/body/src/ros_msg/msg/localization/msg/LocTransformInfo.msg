@@ -1,3 +1,0 @@
-LocQuaternion transform_q
-LocPosLocal transform_t
-LocPosGlobal transform_center

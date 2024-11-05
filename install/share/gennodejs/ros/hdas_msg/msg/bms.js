@@ -35,19 +35,19 @@ class bms {
         this.voltage = initObj.voltage
       }
       else {
-        this.voltage = 0;
+        this.voltage = 0.0;
       }
       if (initObj.hasOwnProperty('current')) {
         this.current = initObj.current
       }
       else {
-        this.current = 0;
+        this.current = 0.0;
       }
       if (initObj.hasOwnProperty('capital')) {
         this.capital = initObj.capital
       }
       else {
-        this.capital = 0;
+        this.capital = 0.0;
       }
     }
   }
@@ -57,11 +57,11 @@ class bms {
     // Serialize message field [header]
     bufferOffset = std_msgs.msg.Header.serialize(obj.header, buffer, bufferOffset);
     // Serialize message field [voltage]
-    bufferOffset = _serializer.int16(obj.voltage, buffer, bufferOffset);
+    bufferOffset = _serializer.float32(obj.voltage, buffer, bufferOffset);
     // Serialize message field [current]
-    bufferOffset = _serializer.int16(obj.current, buffer, bufferOffset);
+    bufferOffset = _serializer.float32(obj.current, buffer, bufferOffset);
     // Serialize message field [capital]
-    bufferOffset = _serializer.int16(obj.capital, buffer, bufferOffset);
+    bufferOffset = _serializer.float32(obj.capital, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -72,18 +72,18 @@ class bms {
     // Deserialize message field [header]
     data.header = std_msgs.msg.Header.deserialize(buffer, bufferOffset);
     // Deserialize message field [voltage]
-    data.voltage = _deserializer.int16(buffer, bufferOffset);
+    data.voltage = _deserializer.float32(buffer, bufferOffset);
     // Deserialize message field [current]
-    data.current = _deserializer.int16(buffer, bufferOffset);
+    data.current = _deserializer.float32(buffer, bufferOffset);
     // Deserialize message field [capital]
-    data.capital = _deserializer.int16(buffer, bufferOffset);
+    data.capital = _deserializer.float32(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
     let length = 0;
     length += std_msgs.msg.Header.getMessageSize(object.header);
-    return length + 6;
+    return length + 12;
   }
 
   static datatype() {
@@ -93,16 +93,16 @@ class bms {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'c249bbc91a486340927685f24c9fded7';
+    return '67510a0011fd924169d84e754f550505';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
     std_msgs/Header header
-    int16 voltage
-    int16 current
-    int16 capital
+    float32 voltage
+    float32 current
+    float32 capital
     
     ================================================================================
     MSG: std_msgs/Header
@@ -140,21 +140,21 @@ class bms {
       resolved.voltage = msg.voltage;
     }
     else {
-      resolved.voltage = 0
+      resolved.voltage = 0.0
     }
 
     if (msg.current !== undefined) {
       resolved.current = msg.current;
     }
     else {
-      resolved.current = 0
+      resolved.current = 0.0
     }
 
     if (msg.capital !== undefined) {
       resolved.capital = msg.capital;
     }
     else {
-      resolved.capital = 0
+      resolved.capital = 0.0
     }
 
     return resolved;

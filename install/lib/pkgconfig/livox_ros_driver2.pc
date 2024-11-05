@@ -1,4 +1,4 @@
-prefix=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install
+prefix=/home/nvidia/work/ci_pipeline/workspace/body/install
 
 Name: livox_ros_driver2
 Description: Description of livox_ros_driver2

@@ -1,0 +1,2 @@
+uint8 available
+LocPoseDetailInfo pose_detail_info

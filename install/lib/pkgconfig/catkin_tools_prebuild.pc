@@ -1,4 +1,4 @@
-prefix=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install
+prefix=/home/nvidia/work/ci_pipeline/workspace/body/install
 
 Name: catkin_tools_prebuild
 Description: Description of catkin_tools_prebuild

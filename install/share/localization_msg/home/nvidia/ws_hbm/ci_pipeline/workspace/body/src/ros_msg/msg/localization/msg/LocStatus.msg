@@ -1,2 +1,0 @@
-uint8 available
-LocStatusInfo status_info

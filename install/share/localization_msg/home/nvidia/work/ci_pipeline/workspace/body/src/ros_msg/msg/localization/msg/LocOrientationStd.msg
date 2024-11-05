@@ -1,0 +1,2 @@
+uint8 available
+LocOriStdXyz ori_std_xyz

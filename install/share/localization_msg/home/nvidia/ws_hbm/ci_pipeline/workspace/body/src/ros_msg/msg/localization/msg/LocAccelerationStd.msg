@@ -1,3 +1,0 @@
-uint8 available
-LocAccStdGlobal acc_std_global
-LocAccStdLocal acc_std_local

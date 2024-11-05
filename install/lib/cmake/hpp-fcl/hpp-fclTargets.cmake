@@ -55,7 +55,7 @@ add_library(hpp-fcl::hpp-fcl SHARED IMPORTED)
 
 set_target_properties(hpp-fcl::hpp-fcl PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "HPP_FCL_HAVE_OCTOMAP;OCTOMAP_MAJOR_VERSION=1;OCTOMAP_MINOR_VERSION=9;OCTOMAP_PATCH_VERSION=8"
-  INTERFACE_INCLUDE_DIRECTORIES "/usr/include;/usr/include/eigen3;${_IMPORT_PREFIX}/include;/opt/ros/noetic/include;/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/usr/include;/usr/include/eigen3;${_IMPORT_PREFIX}/include;/opt/ros/noetic/include;/home/nvidia/work/ci_pipeline/workspace/body/install/include"
   INTERFACE_LINK_LIBRARIES "/opt/ros/noetic/lib/liboctomap.so;/opt/ros/noetic/lib/liboctomath.so"
   INTERFACE_SYSTEM_INCLUDE_DIRECTORIES "/usr/include;/usr/include/eigen3;/opt/ros/noetic/include"
 )

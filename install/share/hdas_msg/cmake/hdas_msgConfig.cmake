@@ -67,14 +67,14 @@ set(hdas_msg_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(hdas_msg_SOURCE_PREFIX /home/nvidia/ws_hbm/ci_pipeline/workspace/body/src/ros_msg/msg/hdas)
-  set(hdas_msg_DEVEL_PREFIX /home/nvidia/ws_hbm/ci_pipeline/workspace/body/devel/.private/hdas_msg)
+  set(hdas_msg_SOURCE_PREFIX /home/nvidia/work/ci_pipeline/workspace/body/src/ros_msg/msg/hdas)
+  set(hdas_msg_DEVEL_PREFIX /home/nvidia/work/ci_pipeline/workspace/body/devel/.private/hdas_msg)
   set(hdas_msg_INSTALL_PREFIX "")
   set(hdas_msg_PREFIX ${hdas_msg_DEVEL_PREFIX})
 else()
   set(hdas_msg_SOURCE_PREFIX "")
   set(hdas_msg_DEVEL_PREFIX "")
-  set(hdas_msg_INSTALL_PREFIX /home/nvidia/ws_hbm/ci_pipeline/workspace/body/install)
+  set(hdas_msg_INSTALL_PREFIX /home/nvidia/work/ci_pipeline/workspace/body/install)
   set(hdas_msg_PREFIX ${hdas_msg_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/lib;/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/lib;/opt/ros/noetic/lib)
+    foreach(path /home/nvidia/work/ci_pipeline/workspace/body/install/lib;/home/nvidia/work/ci_pipeline/workspace/body/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

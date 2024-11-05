@@ -1,13 +1,13 @@
-prefix=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install
-exec_prefix=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install
-libdir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/lib
-bindir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/bin
-pkglibdir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/lib/pinocchio
-includedir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/include
-datarootdir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/share
-pkgdatarootdir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/share
-docdir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/share/doc/pinocchio
-doxygendocdir=/home/nvidia/ws_hbm/ci_pipeline/workspace/body/install/share/doc/pinocchio/doxygen-html
+prefix=/home/nvidia/work/ci_pipeline/workspace/body/install
+exec_prefix=/home/nvidia/work/ci_pipeline/workspace/body/install
+libdir=/home/nvidia/work/ci_pipeline/workspace/body/install/lib
+bindir=/home/nvidia/work/ci_pipeline/workspace/body/install/bin
+pkglibdir=/home/nvidia/work/ci_pipeline/workspace/body/install/lib/pinocchio
+includedir=/home/nvidia/work/ci_pipeline/workspace/body/install/include
+datarootdir=/home/nvidia/work/ci_pipeline/workspace/body/install/share
+pkgdatarootdir=/home/nvidia/work/ci_pipeline/workspace/body/install/share
+docdir=/home/nvidia/work/ci_pipeline/workspace/body/install/share/doc/pinocchio
+doxygendocdir=/home/nvidia/work/ci_pipeline/workspace/body/install/share/doc/pinocchio/doxygen-html
 
 Name: pinocchio
 Description: A fast and flexible implementation of Rigid Body Dynamics algorithms and their analytical derivatives

@@ -9,13 +9,13 @@ import struct
 import std_msgs.msg
 
 class bms(genpy.Message):
-  _md5sum = "c249bbc91a486340927685f24c9fded7"
+  _md5sum = "67510a0011fd924169d84e754f550505"
   _type = "hdas_msg/bms"
   _has_header = True  # flag to mark the presence of a Header object
   _full_text = """std_msgs/Header header
-int16 voltage
-int16 current
-int16 capital
+float32 voltage
+float32 current
+float32 capital
 
 ================================================================================
 MSG: std_msgs/Header
@@ -34,7 +34,7 @@ time stamp
 string frame_id
 """
   __slots__ = ['header','voltage','current','capital']
-  _slot_types = ['std_msgs/Header','int16','int16','int16']
+  _slot_types = ['std_msgs/Header','float32','float32','float32']
 
   def __init__(self, *args, **kwds):
     """
@@ -56,16 +56,16 @@ string frame_id
       if self.header is None:
         self.header = std_msgs.msg.Header()
       if self.voltage is None:
-        self.voltage = 0
+        self.voltage = 0.
       if self.current is None:
-        self.current = 0
+        self.current = 0.
       if self.capital is None:
-        self.capital = 0
+        self.capital = 0.
     else:
       self.header = std_msgs.msg.Header()
-      self.voltage = 0
-      self.current = 0
-      self.capital = 0
+      self.voltage = 0.
+      self.current = 0.
+      self.capital = 0.
 
   def _get_types(self):
     """
@@ -88,7 +88,7 @@ string frame_id
         length = len(_x)
       buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       _x = self
-      buff.write(_get_struct_3h().pack(_x.voltage, _x.current, _x.capital))
+      buff.write(_get_struct_3f().pack(_x.voltage, _x.current, _x.capital))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -118,8 +118,8 @@ string frame_id
         self.header.frame_id = str[start:end]
       _x = self
       start = end
-      end += 6
-      (_x.voltage, _x.current, _x.capital,) = _get_struct_3h().unpack(str[start:end])
+      end += 12
+      (_x.voltage, _x.current, _x.capital,) = _get_struct_3f().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -141,7 +141,7 @@ string frame_id
         length = len(_x)
       buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       _x = self
-      buff.write(_get_struct_3h().pack(_x.voltage, _x.current, _x.capital))
+      buff.write(_get_struct_3f().pack(_x.voltage, _x.current, _x.capital))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -172,8 +172,8 @@ string frame_id
         self.header.frame_id = str[start:end]
       _x = self
       start = end
-      end += 6
-      (_x.voltage, _x.current, _x.capital,) = _get_struct_3h().unpack(str[start:end])
+      end += 12
+      (_x.voltage, _x.current, _x.capital,) = _get_struct_3f().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -188,9 +188,9 @@ def _get_struct_3I():
     if _struct_3I is None:
         _struct_3I = struct.Struct("<3I")
     return _struct_3I
-_struct_3h = None
-def _get_struct_3h():
-    global _struct_3h
-    if _struct_3h is None:
-        _struct_3h = struct.Struct("<3h")
-    return _struct_3h
+_struct_3f = None
+def _get_struct_3f():
+    global _struct_3f
+    if _struct_3f is None:
+        _struct_3f = struct.Struct("<3f")
+    return _struct_3f
