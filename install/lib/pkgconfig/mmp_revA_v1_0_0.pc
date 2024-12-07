@@ -1,0 +1,8 @@
+prefix=/home/nvidia/work/ci_pipeline/workspace/body/install
+
+Name: mmp_revA_v1_0_0
+Description: Description of mmp_revA_v1_0_0
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

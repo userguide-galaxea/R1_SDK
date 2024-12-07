@@ -1,0 +1,23 @@
+<launch>
+  <arg name="model" />
+
+  <arg name="urdfFile" value="$(find mobiman)/urdf/R1_T/urdf/URDF_R1_T_EVT1_V1_0_0.urdf" />
+  <arg name="taskFile_left" value="$(find mobiman)/config/task_r1_tele_left.info" />
+  <arg name="libFolder_left" value="$(find mobiman)/auto_generated/r1_tele_robot_left" />
+  <arg name="taskFile_right" value="$(find mobiman)/config/task_r1_tele_right.info" />
+  <arg name="libFolder_right" value="$(find mobiman)/auto_generated/r1_tele_robot_right" />
+  <arg name="taskFile_torso" value="$(find mobiman)/config/task_r1_torso.info" />
+  <arg name="libFolder_torso" value="$(find mobiman)/auto_generated/r1_tele_robot_torso" />
+
+   <param name="urdfFile" value="$(arg urdfFile)" />
+  <param name="taskFile_left" value="$(arg taskFile_left)" />
+  <param name="taskFile_right" value="$(arg taskFile_right)" />
+  <param name="taskFile_torso" value="$(arg taskFile_torso)" />
+
+  <param name="libFolder_left" value="$(arg libFolder_left)" />
+  <param name="libFolder_right" value="$(arg libFolder_right)" />
+  <param name="libFolder_torso" value="$(arg libFolder_torso)" />
+      <!-- 启动 my_rviz_node -->
+  <node pkg="mobiman" type="r1_teleoperation"
+            name="r1_teleoperation" output="screen"/>
+</launch>

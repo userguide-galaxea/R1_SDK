@@ -1,0 +1,1752 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="mobiman/urdf/PI-Bot-SampleA">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0024126 -8.9626E-05 0.13736"
+        rpy="0 0 0" />
+      <mass
+        value="62" />
+      <inertia
+        ixx="1.578"
+        ixy="-1.2021E-05"
+        ixz="0.053642"
+        iyy="1.462"
+        iyz="7.2969E-06"
+        izz="2.8318" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="steer_motor_link1">
+    <inertial>
+      <origin
+        xyz="0.0011203 -0.038858 -0.038897"
+        rpy="0 0 0" />
+      <mass
+        value="1.0" />
+      <inertia
+        ixx="8.3911E-05"
+        ixy="-3.7754E-06"
+        ixz="4.5458E-09"
+        iyy="7.0741E-05"
+        iyz="-7.0316E-07"
+        izz="9.2604E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/steer_motor_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.59608 0.66667 0.68627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/steer_motor_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="steer_motor_joint1"
+    type="revolute">
+    <origin
+      xyz="0.21516 0.28 0.12375"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="steer_motor_link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="wheel_motor_link1">
+    <inertial>
+      <origin
+        xyz="-2.6184E-06 0.0015607 1.6575E-07"
+        rpy="0 0 0" />
+      <mass
+        value="2.2" />
+      <inertia
+        ixx="0.00089952"
+        ixy="6.916E-08"
+        ixz="7.5501E-10"
+        iyy="0.0015854"
+        iyz="7.6011E-12"
+        izz="0.00089958" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/wheel_motor_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.59608 0.66667 0.68627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/wheel_motor_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_motor_joint1"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.09525"
+      rpy="0 0 0" />
+    <parent
+      link="steer_motor_link1" />
+    <child
+      link="wheel_motor_link1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="steer_motor_link2">
+    <inertial>
+      <origin
+        xyz="0.0011198 0.038863 -0.038902"
+        rpy="0 0 0" />
+      <mass
+        value="1.0" />
+      <inertia
+        ixx="8.3899E-05"
+        ixy="3.7729E-06"
+        ixz="4.5842E-09"
+        iyy="7.0725E-05"
+        iyz="7.0146E-07"
+        izz="9.2578E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/steer_motor_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.59608 0.66667 0.68627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/steer_motor_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="steer_motor_joint2"
+    type="revolute">
+    <origin
+      xyz="0.21516 -0.28 0.12375"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="steer_motor_link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="wheel_motor_link2">
+    <inertial>
+      <origin
+        xyz="2.6199E-06 -0.0015607 1.6573E-07"
+        rpy="0 0 0" />
+      <mass
+        value="2.2" />
+      <inertia
+        ixx="0.00089952"
+        ixy="6.9163E-08"
+        ixz="-7.5368E-10"
+        iyy="0.0015854"
+        iyz="-7.6749E-12"
+        izz="0.00089958" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/wheel_motor_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.59608 0.66667 0.68627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/wheel_motor_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_motor_joint2"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.09525"
+      rpy="0 0 0" />
+    <parent
+      link="steer_motor_link2" />
+    <child
+      link="wheel_motor_link2" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="steer_motor_link3">
+    <inertial>
+      <origin
+        xyz="-0.0011198 -0.038863 -0.038902"
+        rpy="0 0 0" />
+      <mass
+        value="1.0" />
+      <inertia
+        ixx="8.3899E-05"
+        ixy="3.7729E-06"
+        ixz="-4.5842E-09"
+        iyy="7.0725E-05"
+        iyz="-7.0146E-07"
+        izz="9.2578E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/steer_motor_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.59608 0.66667 0.68627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/steer_motor_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="steer_motor_joint3"
+    type="revolute">
+    <origin
+      xyz="-0.28084 0 0.12375"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="steer_motor_link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="wheel_motor_link3">
+    <inertial>
+      <origin
+        xyz="2.6203E-06 0.0015607 -1.6564E-07"
+        rpy="0 0 0" />
+      <mass
+        value="2.2" />
+      <inertia
+        ixx="0.00089952"
+        ixy="-6.9072E-08"
+        ixz="7.5036E-10"
+        iyy="0.0015854"
+        iyz="-7.845E-12"
+        izz="0.00089958" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/wheel_motor_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.59608 0.66667 0.68627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/wheel_motor_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_motor_joint3"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.09525"
+      rpy="0 0 0" />
+    <parent
+      link="steer_motor_link3" />
+    <child
+      link="wheel_motor_link3" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="torso_link1">
+    <inertial>
+      <origin
+        xyz="0.00065636 0.0032247 0.23142"
+        rpy="0 0 0" />
+      <mass
+        value="6.5" />
+      <inertia
+        ixx="0.10931"
+        ixy="7.7893E-06"
+        ixz="-0.00017473"
+        iyy="0.10736"
+        iyz="0.00013763"
+        izz="0.0081222" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/torso_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.37255 0.37255 0.37255 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/torso_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="torso_joint1"
+    type="revolute">
+    <origin
+      xyz="-0.032845 0 0.301"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="torso_link1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.1345"
+      upper="1.8326"
+      effort="100"
+      velocity="2.5" />
+  </joint>
+  <link
+    name="torso_link2">
+    <inertial>
+      <origin
+        xyz="0.0052517 0.014412 0.15711"
+        rpy="0 0 0" />
+      <mass
+        value="5.5" />
+      <inertia
+        ixx="0.026081"
+        ixy="-3.341E-07"
+        ixz="0.00024541"
+        iyy="0.027574"
+        iyz="3.8474E-07"
+        izz="0.0018515" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/torso_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/torso_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="torso_joint2"
+    type="revolute">
+    <origin
+      xyz="0 0 0.4"
+      rpy="0 0 0" />
+    <parent
+      link="torso_link1" />
+    <child
+      link="torso_link2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.7925"
+      upper="2.5307"
+      effort="100"
+      velocity="2.5" />
+  </joint>
+  <link
+    name="torso_link3">
+    <inertial>
+      <origin
+        xyz="-7.551E-06 -0.0092667 0.0042124"
+        rpy="0 0 0" />
+      <mass
+        value="3.5" />
+      <inertia
+        ixx="0.0014058"
+        ixy="3.5487E-07"
+        ixz="9.0955E-08"
+        iyy="0.0021992"
+        iyz="1.6338E-05"
+        izz="0.0013332" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/torso_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.37255 0.37255 0.37255 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/torso_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="torso_joint3"
+    type="revolute">
+    <origin
+      xyz="0 0 0.3"
+      rpy="0 0 0" />
+    <parent
+      link="torso_link2" />
+    <child
+      link="torso_link3" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.38"
+      upper="1.68"
+      effort="100"
+      velocity="2.5" />
+  </joint>
+  <link
+    name="torso_link4">
+    <inertial>
+      <origin
+        xyz="-0.063929 7.6867E-05 0.024944"
+        rpy="0 0 0" />
+      <mass
+        value="9.7" />
+      <inertia
+        ixx="0.01277"
+        ixy="-4.3378E-05"
+        ixz="1.0087E-05"
+        iyy="0.0099974"
+        iyz="7.1603E-06"
+        izz="0.021133" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/torso_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/torso_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="torso_joint4"
+    type="revolute">
+    <origin
+      xyz="0 0 0.09962"
+      rpy="0 0 0" />
+    <parent
+      link="torso_link3" />
+    <child
+      link="torso_link4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.0543"
+      upper="3.0543"
+      effort="100"
+      velocity="2.5" />
+  </joint>
+  <link
+    name="left_arm_base_link">
+    <inertial>
+      <origin
+        xyz="-0.00056323 -3.1972E-06 0.038934"
+        rpy="0 0 0" />
+      <mass
+        value="2.465" />
+      <inertia
+        ixx="0.0010597"
+        ixy="1.675E-07"
+        ixz="1.9822E-05"
+        iyy="0.0010647"
+        iyz="1.9134E-07"
+        izz="0.0011787" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/left_arm_base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/left_arm_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_base_joint"
+    type="fixed">
+    <origin
+      xyz="0.0011155 0.335 0.03512"
+      rpy="0 0 0" />
+    <parent
+      link="torso_link4" />
+    <child
+      link="left_arm_base_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_arm_link1">
+    <inertial>
+      <origin
+        xyz="0.029139 -0.0033479 0.89803"
+        rpy="0 0 0" />
+      <mass
+        value="1.319" />
+      <inertia
+        ixx="0.0013567"
+        ixy="0.00042602"
+        ixz="0.0014294"
+        iyy="0.0013928"
+        iyz="-0.0098961"
+        izz="0.0053368" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/left_arm_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/left_arm_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint1"
+    type="revolute">
+    <origin
+      xyz="-0.0011147 0 0.0446"
+      rpy="0 0 0" />
+    <parent
+      link="left_arm_base_link" />
+    <child
+      link="left_arm_link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.8798"
+      upper="2.8798"
+      effort="40"
+      velocity="20.944" />
+  </joint>
+  <link
+    name="left_arm_link2">
+    <inertial>
+      <origin
+        xyz="-0.23623 0.00013246 0.016352"
+        rpy="0 0 0" />
+      <mass
+        value="1.3" />
+      <inertia
+        ixx="0.00060639"
+        ixy="-0.00014953"
+        ixz="0.00041826"
+        iyy="0.0075708"
+        iyz="8.0938E-06"
+        izz="0.0075932" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/left_arm_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/left_arm_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint2"
+    type="revolute">
+    <origin
+      xyz="0 0 0.1061"
+      rpy="0 0 0" />
+    <parent
+      link="left_arm_link1" />
+    <child
+      link="left_arm_link2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="3.2289"
+      effort="40"
+      velocity="20.944" />
+  </joint>
+  <link
+    name="left_arm_link3">
+    <inertial>
+      <origin
+        xyz="0.045114 0.00045951 0.054617"
+        rpy="0 0 0" />
+      <mass
+        value="0.818" />
+      <inertia
+        ixx="0.00060106"
+        ixy="6.9679E-06"
+        ixz="-0.00022464"
+        iyy="0.0015026"
+        iyz="9.7449E-06"
+        izz="0.0013957" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/left_arm_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/left_arm_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint3"
+    type="revolute">
+    <origin
+      xyz="-0.34928 0 0.02"
+      rpy="0 0 0" />
+    <parent
+      link="left_arm_link2" />
+    <child
+      link="left_arm_link3" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.3161"
+      upper="0"
+      effort="27"
+      velocity="7.5398" />
+  </joint>
+  <link
+    name="left_arm_link4">
+    <inertial>
+      <origin
+        xyz="0.24285 -8.1226E-07 0.0023774"
+        rpy="0 0 0" />
+      <mass
+        value="0.816" />
+      <inertia
+        ixx="8.4501E-05"
+        ixy="2.2977E-09"
+        ixz="-8.2585E-07"
+        iyy="9.7045E-05"
+        iyz="-5.0789E-09"
+        izz="0.00010174" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/left_arm_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/left_arm_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint4"
+    type="revolute">
+    <origin
+      xyz="0.02735 0 0.069767"
+      rpy="0 0 0" />
+    <parent
+      link="left_arm_link3" />
+    <child
+      link="left_arm_link4" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.8798"
+      upper="2.8798"
+      effort="7"
+      velocity="25.133" />
+  </joint>
+  <link
+    name="left_arm_link5">
+    <inertial>
+      <origin
+        xyz="0.054309 -3.9544E-06 0.004181"
+        rpy="0 0 0" />
+      <mass
+        value="0.801" />
+      <inertia
+        ixx="8.4E-05"
+        ixy="-7.4088E-08"
+        ixz="1.6234E-05"
+        iyy="0.00011333"
+        iyz="1.3677E-08"
+        izz="9.8498E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/left_arm_link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/left_arm_link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint5"
+    type="revolute">
+    <origin
+      xyz="0.2463 0 -0.0005"
+      rpy="0 0 0" />
+    <parent
+      link="left_arm_link4" />
+    <child
+      link="left_arm_link5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.6581"
+      upper="1.6581"
+      effort="7"
+      velocity="25.133" />
+  </joint>
+  <link
+    name="left_arm_link6">
+    <inertial>
+      <origin
+        xyz="0.028138 -5.414E-13 1.2568E-13"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="3.5662E-06"
+        ixy="2.1364E-17"
+        ixz="-3.7782E-18"
+        iyy="2.0238E-06"
+        iyz="1.7998E-12"
+        izz="2.0238E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/left_arm_link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/left_arm_link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_joint6"
+    type="revolute">
+    <origin
+      xyz="0.058249 0 0.0005"
+      rpy="0 0 0" />
+    <parent
+      link="left_arm_link5" />
+    <child
+      link="left_arm_link6" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.8798"
+      upper="2.8798"
+      effort="7"
+      velocity="25.133" />
+  </joint>
+  <link
+    name="left_gripper_link">
+    <inertial>
+      <origin
+        xyz="-0.031107 -9.0557E-08 -2.3135E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.465" />
+      <inertia
+        ixx="0.00017588"
+        ixy="1.3063E-09"
+        ixz="4.2061E-11"
+        iyy="0.00016512"
+        iyz="8.1873E-08"
+        izz="9.8636E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/left_gripper_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/left_gripper_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_gripper_joint"
+    type="fixed">
+    <origin
+      xyz="0.1039 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_arm_link6" />
+    <child
+      link="left_gripper_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_gripper_finger_link1">
+    <inertial>
+      <origin
+        xyz="-0.01959 -0.0054224 -0.015114"
+        rpy="0 0 0" />
+      <mass
+        value="0.057" />
+      <inertia
+        ixx="2.4057E-06"
+        ixy="-5.1214E-08"
+        ixz="3.9899E-07"
+        iyy="6.4849E-06"
+        iyz="-6.1948E-08"
+        izz="5.7108E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/left_gripper_finger_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/left_gripper_finger_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_gripper_finger_joint1"
+    type="prismatic">
+    <origin
+      xyz="0.03689 -0.00012066 0.013453"
+      rpy="0 0 0" />
+    <parent
+      link="left_gripper_link" />
+    <child
+      link="left_gripper_finger_link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.05"
+      effort="100"
+      velocity="0.25" />
+  </joint>
+  <link
+    name="left_gripper_finger_link2">
+    <inertial>
+      <origin
+        xyz="-0.01959 0.0054224 0.015114"
+        rpy="0 0 0" />
+      <mass
+        value="0.057" />
+      <inertia
+        ixx="2.4057E-06"
+        ixy="5.1214E-08"
+        ixz="-3.9899E-07"
+        iyy="6.4849E-06"
+        iyz="-6.1948E-08"
+        izz="5.7108E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/left_gripper_finger_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/left_gripper_finger_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_gripper_finger_joint2"
+    type="prismatic">
+    <origin
+      xyz="0.03689 0.00012066 -0.013453"
+      rpy="0 0 0" />
+    <parent
+      link="left_gripper_link" />
+    <child
+      link="left_gripper_finger_link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.05"
+      upper="0"
+      effort="100"
+      velocity="0.25" />
+  </joint>
+  <link
+    name="right_arm_base_link">
+    <inertial>
+      <origin
+        xyz="-0.00056323 -3.1972E-06 0.038934"
+        rpy="0 0 0" />
+      <mass
+        value="2.465" />
+      <inertia
+        ixx="0.0010597"
+        ixy="1.675E-07"
+        ixz="1.9822E-05"
+        iyy="0.0010647"
+        iyz="1.9134E-07"
+        izz="0.0011787" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/right_arm_base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/right_arm_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_base_joint"
+    type="fixed">
+    <origin
+      xyz="0.0011155 -0.335 0.035121"
+      rpy="0 0 0" />
+    <parent
+      link="torso_link4" />
+    <child
+      link="right_arm_base_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right_arm_link1">
+    <inertial>
+      <origin
+        xyz="0.029139 0.0033521 0.89803"
+        rpy="0 0 0" />
+      <mass
+        value="1.319" />
+      <inertia
+        ixx="0.0013567"
+        ixy="0.00042602"
+        ixz="0.0014294"
+        iyy="0.0013928"
+        iyz="-0.0098961"
+        izz="0.0053368" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/right_arm_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/right_arm_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint1"
+    type="revolute">
+    <origin
+      xyz="-0.0011147 0 0.0446"
+      rpy="0 0 0" />
+    <parent
+      link="right_arm_base_link" />
+    <child
+      link="right_arm_link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.8798"
+      upper="2.8798"
+      effort="40"
+      velocity="20.944" />
+  </joint>
+  <link
+    name="right_arm_link2">
+    <inertial>
+      <origin
+        xyz="-0.23623 0.00013246 0.016352"
+        rpy="0 0 0" />
+      <mass
+        value="1.3" />
+      <inertia
+        ixx="0.00060639"
+        ixy="-0.00014953"
+        ixz="0.00041826"
+        iyy="0.0075708"
+        iyz="8.0938E-06"
+        izz="0.0075932" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/right_arm_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/right_arm_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint2"
+    type="revolute">
+    <origin
+      xyz="0 0 0.1061"
+      rpy="0 0 0" />
+    <parent
+      link="right_arm_link1" />
+    <child
+      link="right_arm_link2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="3.2289"
+      effort="40"
+      velocity="20.944" />
+  </joint>
+  <link
+    name="right_arm_link3">
+    <inertial>
+      <origin
+        xyz="0.045114 0.00045953 0.054617"
+        rpy="0 0 0" />
+      <mass
+        value="0.818" />
+      <inertia
+        ixx="0.00060106"
+        ixy="6.9669E-06"
+        ixz="-0.00022464"
+        iyy="0.0015025"
+        iyz="9.7448E-06"
+        izz="0.0013957" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/right_arm_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/right_arm_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint3"
+    type="revolute">
+    <origin
+      xyz="-0.34928 0 0.02"
+      rpy="0 0 0" />
+    <parent
+      link="right_arm_link2" />
+    <child
+      link="right_arm_link3" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.3161"
+      upper="0"
+      effort="27"
+      velocity="7.5398" />
+  </joint>
+  <link
+    name="right_arm_link4">
+    <inertial>
+      <origin
+        xyz="0.24285 -8.1226E-07 0.0023774"
+        rpy="0 0 0" />
+      <mass
+        value="0.816" />
+      <inertia
+        ixx="8.4501E-05"
+        ixy="2.2977E-09"
+        ixz="-8.2585E-07"
+        iyy="9.7045E-05"
+        iyz="-5.0789E-09"
+        izz="0.00010174" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/right_arm_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/right_arm_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint4"
+    type="revolute">
+    <origin
+      xyz="0.02735 0 0.069767"
+      rpy="0 0 0" />
+    <parent
+      link="right_arm_link3" />
+    <child
+      link="right_arm_link4" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.8798"
+      upper="2.8798"
+      effort="7"
+      velocity="25.133" />
+  </joint>
+  <link
+    name="right_arm_link5">
+    <inertial>
+      <origin
+        xyz="0.054309 -3.9544E-06 0.004181"
+        rpy="0 0 0" />
+      <mass
+        value="0.801" />
+      <inertia
+        ixx="8.4E-05"
+        ixy="-7.4088E-08"
+        ixz="1.6234E-05"
+        iyy="0.00011333"
+        iyz="1.3677E-08"
+        izz="9.8498E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/right_arm_link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/right_arm_link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint5"
+    type="revolute">
+    <origin
+      xyz="0.2463 0 -0.0005"
+      rpy="0 0 0" />
+    <parent
+      link="right_arm_link4" />
+    <child
+      link="right_arm_link5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.6581"
+      upper="1.6581"
+      effort="7"
+      velocity="25.133" />
+  </joint>
+  <link
+    name="right_arm_link6">
+    <inertial>
+      <origin
+        xyz="0.028138 -5.4129E-13 1.259E-13"
+        rpy="0 0 0" />
+      <mass
+        value="0.1" />
+      <inertia
+        ixx="3.5662E-06"
+        ixy="2.1366E-17"
+        ixz="-3.7836E-18"
+        iyy="2.0238E-06"
+        iyz="1.7998E-12"
+        izz="2.0238E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/right_arm_link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/right_arm_link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_joint6"
+    type="revolute">
+    <origin
+      xyz="0.058249 0 0.0005"
+      rpy="0 0 0" />
+    <parent
+      link="right_arm_link5" />
+    <child
+      link="right_arm_link6" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.8798"
+      upper="2.8798"
+      effort="7"
+      velocity="25.133" />
+  </joint>
+  <link
+    name="right_gripper_link">
+    <inertial>
+      <origin
+        xyz="-0.031107 -9.0557E-08 -2.3135E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.465" />
+      <inertia
+        ixx="0.00017588"
+        ixy="1.3063E-09"
+        ixz="4.2061E-11"
+        iyy="0.00016512"
+        iyz="8.1873E-08"
+        izz="9.8636E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/right_gripper_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/right_gripper_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_gripper_joint"
+    type="fixed">
+    <origin
+      xyz="0.1039 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="right_arm_link6" />
+    <child
+      link="right_gripper_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right_gripper_finger_link1">
+    <inertial>
+      <origin
+        xyz="-0.01959 -0.0054224 -0.015114"
+        rpy="0 0 0" />
+      <mass
+        value="0.057" />
+      <inertia
+        ixx="2.4057E-06"
+        ixy="-5.1214E-08"
+        ixz="3.9899E-07"
+        iyy="6.4849E-06"
+        iyz="-6.1948E-08"
+        izz="5.7108E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/right_gripper_finger_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/right_gripper_finger_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_gripper_finger_joint1"
+    type="prismatic">
+    <origin
+      xyz="0.03689 -0.00012066 0.013453"
+      rpy="0 0 0" />
+    <parent
+      link="right_gripper_link" />
+    <child
+      link="right_gripper_finger_link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.05"
+      effort="100"
+      velocity="0.25" />
+  </joint>
+  <link
+    name="right_gripper_finger_link2">
+    <inertial>
+      <origin
+        xyz="-0.01959 0.0054224 0.015114"
+        rpy="0 0 0" />
+      <mass
+        value="0.057" />
+      <inertia
+        ixx="2.4057E-06"
+        ixy="5.1214E-08"
+        ixz="-3.9899E-07"
+        iyy="6.4849E-06"
+        iyz="-6.1948E-08"
+        izz="5.7108E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/right_gripper_finger_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.82353 0.82353 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mobiman/urdf/PI-Bot-SampleA/meshes/right_gripper_finger_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_gripper_finger_joint2"
+    type="prismatic">
+    <origin
+      xyz="0.03689 0.00012066 -0.013453"
+      rpy="0 0 0" />
+    <parent
+      link="right_gripper_link" />
+    <child
+      link="right_gripper_finger_link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.05"
+      upper="0"
+      effort="100"
+      velocity="0.25" />
+  </joint>
+</robot>

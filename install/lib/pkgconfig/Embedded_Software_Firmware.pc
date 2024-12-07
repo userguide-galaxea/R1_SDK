@@ -1,0 +1,8 @@
+prefix=/home/nvidia/work/ci_pipeline/workspace/body/install
+
+Name: Embedded_Software_Firmware
+Description: Description of Embedded_Software_Firmware
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp rospy

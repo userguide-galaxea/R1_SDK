@@ -1,0 +1,40 @@
+<launch>
+    <!-- 1. 定义启动参数 -->
+    <arg name="debug" default="false" />
+    <!-- 是否启用RViz可视化 -->
+    <arg name="rviz" default="true" />
+    
+    <!-- 机器人URDF文件的路径 -->
+    <arg name="urdfFile" default="$(find mobiman)/urdf/R1/urdf/URDF_R1_V1_0_4.urdf" />
+    <!-- 任务配置文件的路径 -->
+    <arg name="taskFile" default="$(find mobiman)/config/task.info" />
+    <!-- 库文件夹的路径，用于生成CppAD代码 -->
+    <arg name="libFolder" default="$(find mobiman)/auto_generated/R1_robot" />
+    
+    <!-- 2. 设置参数服务器上的参数 -->
+    <param name="taskFile" value="$(arg taskFile)" />
+    <param name="urdfFile" value="$(arg urdfFile)" />
+    <param name="libFolder" value="$(arg libFolder)" />
+    
+
+    
+    
+      <node if="$(arg debug)" pkg="mobiman" type="torso_control_error_torso_msg_dynamics_node" name="torso_control_error_torso_msg_dynamics_node"
+            output="screen" launch-prefix="gdb -ex run --args" />
+
+      <node unless="$(arg debug)" pkg="mobiman" type="torso_control_error_torso_msg_dynamics_node"
+            name="torso_control_error_torso_msg_dynamics_node"
+            output="screen" launch-prefix="" />
+      <param name="urdfFile" value="$(arg urdfFile)" />
+      <arg name="model" default="$(arg urdfFile)"/>
+      <param name="robot_description" command="$(find xacro)/xacro '$(arg model)'" />
+
+
+    
+    <!-- 6. 启动RViz可视化（如果启用） -->
+    <group if="$(arg rviz)">
+        <include file="$(find ocs2_mobile_manipulator_ros)/launch/include/visualize.launch">
+            <arg name="urdfFile" value="$(arg urdfFile)" />
+        </include>
+    </group>
+</launch>

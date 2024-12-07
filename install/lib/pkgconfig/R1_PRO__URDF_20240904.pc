@@ -1,8 +1,0 @@
-prefix=/home/nvidia/work/ci_pipeline/workspace/body/install
-
-Name: R1_PRO__URDF_20240904
-Description: Description of R1_PRO__URDF_20240904
-Version: 1.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

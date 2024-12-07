@@ -3,6 +3,6 @@ prefix=/home/nvidia/work/ci_pipeline/workspace/body/install
 Name: HDAS
 Description: Description of HDAS
 Version: 0.0.1
-Cflags: 
-Libs: -L${prefix}/lib 
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lcommunication -ldispatcher
 Requires: roscpp rospy std_msgs hdas_msg tf2

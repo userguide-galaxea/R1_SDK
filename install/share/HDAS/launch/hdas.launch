@@ -38,8 +38,9 @@
 
         <param name="function_frame_service_left_arm_name" value="function_frame_left_arm"/>
         <param name="function_frame_service_right_arm_name" value="function_frame_right_arm"/>
-
         <param name="function_frame_service_torso_name" value="function_frame_torso"/>
+
+        <param name="r1_t" value="false" type="bool"/>
 
     </node>
 </launch>

@@ -20,10 +20,10 @@ model_information {
     [13] "left_arm_joint4"
     [14] "left_arm_joint5"
     [15] "left_arm_joint6"
-    [16] "left_gripper_axis1"
-    [17] "left_gripper_axis2"
-    [18] "right_gripper_axis1"
-    [19] "right_gripper_axis2"
+    [16] "left_gripper_finger_joint1"
+    [17] "left_gripper_finger_joint2"
+    [18] "right_gripper_finger_joint1"
+    [19] "right_gripper_finger_joint2"
   }
 
   ; base frame of the robot (from URDF)

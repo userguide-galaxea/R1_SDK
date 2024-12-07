@@ -20,9 +20,9 @@
   <param name="torso_command_topic" value="$(arg torso_command_topic)"/>
   <param
     name="robot_description"
-    textfile="$(find mobiman)/urdf/R1_PRO/urdf/R1_PRO__URDF_20240904.urdf" />
+    textfile="$(find mobiman)/urdf/R1/urdf/r1_v2_1_0.urdf" />
 
-  <arg name="urdfFile" value="$(find mobiman)/urdf/R1_PRO/urdf/R1_PRO__URDF_20240904.urdf" />
+  <arg name="urdfFile" value="$(find mobiman)/urdf/R1/urdf/r1_v2_1_0.urdf" />
   <arg name="left_taskFile" value="$(find mobiman)/config/task_left.info" />
   <arg name="left_libFolder" value="$(find mobiman)/auto_generated/r1_robot_left" />
   <arg name="right_taskFile" value="$(find mobiman)/config/task_right.info" />
@@ -48,7 +48,7 @@
     type="rviz" />
       <!-- 启动 my_rviz_node -->
       <node pkg="mobiman" type="r1_jointTracker_demo_node"
-            name="r1_jointTracker_demo_node" output="screen"/>
-      <node pkg="mobiman" type="eepose_pub_node" name="eePose_pub_node" output="screen">
+            name="r1_jointTracker_demo_node" output="screen" />
+      <node pkg="mobiman" type="eepose_pub_node" name="eePose_pub_node" output="screen" >
       </node>
 </launch>

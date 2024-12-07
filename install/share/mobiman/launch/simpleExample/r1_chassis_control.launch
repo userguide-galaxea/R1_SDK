@@ -11,7 +11,7 @@
          <param name="chassis_control_topic" value="/motion_target/target_speed_chassis"/>
          <param name="sub_controller_topic" value="/controller"/>
   </node>
-    <arg name="urdfFile" value="$(find mobiman)/urdf/R1_PRO/urdf/R1_PRO__URDF_20240904.urdf" />
+    <arg name="urdfFile" value="$(find mobiman)/urdf/R1/urdf/r1_v2_1_0.urdf" />
     <node pkg="mobiman" type="r1_eepose_pub_node" name="r1_eepose_pub_node" output="screen">
       <param name="urdfFile" value="$(arg urdfFile)"/>
     </node>
